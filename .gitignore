@@ -19,3 +19,6 @@ analytics/
 *.docx
 *.ppt
 *.pptx
+
+!/README.md
+!/README.ko.md
