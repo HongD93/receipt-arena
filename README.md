@@ -2,6 +2,8 @@
 
 **English** | [한국어](README.ko.md)
 
+**[Play Receipt Arena](https://receipt-arena.vercel.app)**
+
 A browser puzzle where you inspect real cross-chain receipts, repair payment rules, and protect legitimate payouts.
 
 A receipt proves that an event happened. Should that event authorize a payment? Select a request, run it against the vault, change the rules, and test your defense.

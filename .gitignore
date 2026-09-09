@@ -8,6 +8,7 @@ broadcast/
 !.env.example
 *.log
 .local/
+.vercel/
 
 # Local documents and submission artifacts
 docs/

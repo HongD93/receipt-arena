@@ -1,0 +1,20 @@
+# Exclude local state, credentials, documents, and non-web build artifacts.
+.git/
+.local/
+.vercel/
+.env*
+docs/
+analytics/
+*.md
+*.pdf
+*.docx
+*.pptx
+node_modules/
+dist/
+out/
+cache/
+broadcast/
+contracts/
+scripts/
+tests/
+*.log
