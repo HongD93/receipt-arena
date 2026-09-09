@@ -1,0 +1,21 @@
+node_modules/
+dist/
+out/
+cache/
+broadcast/
+.env
+.env.*
+!.env.example
+*.log
+.local/
+
+# Local documents and submission artifacts
+docs/
+analytics/
+*.md
+*.mdx
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx

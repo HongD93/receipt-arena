@@ -1,0 +1,12 @@
+[profile.default]
+src = "contracts/src"
+test = "contracts/test"
+out = "out"
+cache_path = "cache"
+libs = ["node_modules"]
+remappings = ["@gluwa/=node_modules/@gluwa/"]
+solc_version = "0.8.30"
+evm_version = "shanghai"
+optimizer = true
+optimizer_runs = 200
+via_ir = true

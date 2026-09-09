@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "sourceChainId": 11155111,
+  "targetChainId": 102031,
+  "targetRpc": "https://rpc.cc3-testnet.creditcoin.network",
+  "registry": "0xD172498343446d937D34efd7E62cB35Fb9766675",
+  "arena": "0x72cd8c60256caB69B5B916d1accd8eA8c6AD9931",
+  "genuine": "0x8969e40e01eDE7fe6Bc14ee19AC11464b3a2F406",
+  "forged": "0xD172498343446d937D34efd7E62cB35Fb9766675",
+  "recipient": "0x9Ec50a17C95915C2a6CC80528eb2DdcA0f04Bb96",
+  "evidence": {
+    "normal": {
+      "id": "0xa91f9a225046b2510081eb2d62f8e0abdea813457332f11c52c4c6141bc78533",
+      "sourceTransaction": "0xfcc8019b0145a913ad0a069dc900a53882f0c31c5f84c40ce175f5ac7ddb464b",
+      "sourceBlock": 11644570,
+      "registrationTransaction": "0x74faa8ad230617d1b49770dfb1ba27672e559a9ff0d6406ae72102f6b5c33f9a",
+      "roots": 1,
+      "gasUsed": "223028"
+    },
+    "forged": {
+      "id": "0x5577d9f63e260e1c93b859aa62a5a6b189b4ccb2ddb4ded8ab8f8ccf7178ce20",
+      "sourceTransaction": "0x932352d814b9c764e0cac63053e36174864b8593e7e042c9a6a9de095334529b",
+      "sourceBlock": 11644571,
+      "registrationTransaction": "0x7454ab3ab7a217be1f4673d024fcebc1e7839bec208e0e81ee3eea971025bc8a",
+      "roots": 10,
+      "gasUsed": "227005"
+    },
+    "mixed": {
+      "id": "0x16c9a85c8057c314b8b8ce16de229b744e62f40eb865e49ce04f48532b27fbde",
+      "sourceTransaction": "0x7dd952ae57fd6b27b5e33b7a43a570d4d1750d032e245d80016d65120db1fa1b",
+      "sourceBlock": 11660565,
+      "registrationTransaction": "0xa66b48c4c960fce269cf7050808d616444c3ab28e5b88dee7a7ebfe74d2ab835",
+      "roots": 6,
+      "gasUsed": "323430"
+    }
+  },
+  "checks": {
+    "level1": {
+      "passed": true,
+      "checkedAt": "2026-09-08T10:39:39.380Z",
+      "unsafeAttackPaid": "50",
+      "defendedAttackPaid": "0",
+      "normalPaid": "50",
+      "completionTransaction": "0x2f23edb728455ac91f73f53a052683c5def795e3459ea7ffea22c798bd900aab"
+    },
+    "level2": {
+      "passed": true,
+      "checkedAt": "2026-09-08T10:49:45.460Z",
+      "completionTransaction": "0x062e1b9623c40d0035745577a08e7cdfac37230ad3b3808f7604e377e5bac11f"
+    },
+    "level3": {
+      "passed": true,
+      "checkedAt": "2026-09-08T10:50:00.547Z",
+      "completionTransaction": "0x8aff0cf6c07c1676e22053a5fab83013ccfa3841044957bdcb9b62eca0e15239"
+    }
+  },
+  "availableLevels": [
+    1,
+    2,
+    3
+  ]
+}

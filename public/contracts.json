@@ -1,0 +1,575 @@
+{
+  "arena": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "evidenceRegistry",
+          "type": "address",
+          "internalType": "contract EvidenceRegistry"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "CHECK_EMITTER",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "PREVENT_REPLAY",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "SCAN_LOGS",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "complete",
+      "inputs": [
+        {
+          "name": "number",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "rules",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "completed",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "configureLevel",
+      "inputs": [
+        {
+          "name": "number",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "level",
+          "type": "tuple",
+          "internalType": "struct ReceiptArena.Level",
+          "components": [
+            {
+              "name": "exists",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "expectedEmitter",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "recipient",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "caseKey",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "normalEvidence",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "attackEvidence",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            }
+          ]
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "curator",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "levels",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "exists",
+          "type": "bool",
+          "internalType": "bool"
+        },
+        {
+          "name": "expectedEmitter",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "recipient",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "caseKey",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "normalEvidence",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "attackEvidence",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "preview",
+      "inputs": [
+        {
+          "name": "number",
+          "type": "uint8",
+          "internalType": "uint8"
+        },
+        {
+          "name": "rules",
+          "type": "uint8",
+          "internalType": "uint8"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "tuple",
+          "internalType": "struct ReceiptArena.Outcome",
+          "components": [
+            {
+              "name": "normalPaid",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "attackPaid",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "expectedNormal",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "cleared",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "registry",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract EvidenceRegistry"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "LevelCleared",
+      "inputs": [
+        {
+          "name": "player",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "level",
+          "type": "uint8",
+          "indexed": true,
+          "internalType": "uint8"
+        },
+        {
+          "name": "rules",
+          "type": "uint8",
+          "indexed": false,
+          "internalType": "uint8"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "LevelConfigured",
+      "inputs": [
+        {
+          "name": "level",
+          "type": "uint8",
+          "indexed": true,
+          "internalType": "uint8"
+        },
+        {
+          "name": "normalEvidence",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "attackEvidence",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "InvalidLevel",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidRules",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NotCleared",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "Unauthorized",
+      "inputs": []
+    }
+  ],
+  "registry": [
+    {
+      "type": "function",
+      "name": "MAX_LOGS",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "PAYMENT_TOPIC",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "SOURCE_CHAIN_KEY",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "VERIFIER",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract INativeQueryVerifier"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getEvidence",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple",
+          "internalType": "struct EvidenceRegistry.Evidence",
+          "components": [
+            {
+              "name": "exists",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "blockHeight",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "transactionIndex",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "transactionDataHash",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "logs",
+              "type": "tuple[]",
+              "internalType": "struct EvidenceRegistry.PaymentLog[]",
+              "components": [
+                {
+                  "name": "emitter",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "caseKey",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "recipient",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "amount",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "register",
+      "inputs": [
+        {
+          "name": "blockHeight",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "encodedTransaction",
+          "type": "bytes",
+          "internalType": "bytes"
+        },
+        {
+          "name": "merkleProof",
+          "type": "tuple",
+          "internalType": "struct INativeQueryVerifier.MerkleProof",
+          "components": [
+            {
+              "name": "root",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "siblings",
+              "type": "tuple[]",
+              "internalType": "struct INativeQueryVerifier.MerkleProofEntry[]",
+              "components": [
+                {
+                  "name": "hash",
+                  "type": "bytes32",
+                  "internalType": "bytes32"
+                },
+                {
+                  "name": "isLeft",
+                  "type": "bool",
+                  "internalType": "bool"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "continuityProof",
+          "type": "tuple",
+          "internalType": "struct INativeQueryVerifier.ContinuityProof",
+          "components": [
+            {
+              "name": "lowerEndpointDigest",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "roots",
+              "type": "bytes32[]",
+              "internalType": "bytes32[]"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "EvidenceRegistered",
+      "inputs": [
+        {
+          "name": "id",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "blockHeight",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "transactionIndex",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "dataHash",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AlreadyRegistered",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidProof",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidReceipt",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "MissingEvidence",
+      "inputs": []
+    }
+  ]
+}
